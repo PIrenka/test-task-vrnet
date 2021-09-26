@@ -14,6 +14,7 @@ body {
   padding: 50px;
   outline: 5px solid firebrick;
   background-color: grey;
+  /* height: 100vh; */
 }
 
 .addBtn {
@@ -28,6 +29,7 @@ body {
   border: 3px dotted tomato;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 
   cursor: pointer;
 }
@@ -36,19 +38,27 @@ body {
   background-color: rgb(174, 107, 236);
 }
 
-.recDiv {
+#rectangles > .recDiv {
   width: 30px;
   height: 20px;
   margin: 10px;
   cursor: se-resize;
 
-  position: relative;
+  position: absolute;
+}
+#reqtangles .recDiv:hover {
+  background-color: red;
+  opacity: 0.5;
 }
 
 .clicked {
   width: 50px;
+  z-index: 1;
 }
 
 #rectangles {
-  height: 100vh;
+  position: relative;
+  height: 80vh;
+  /* height: 100vh; */
+  outline: 5px dotted blue;
 }
