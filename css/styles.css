@@ -14,7 +14,6 @@ body {
   padding: 50px;
   outline: 5px solid firebrick;
   background-color: grey;
-  /* height: 100vh; */
 }
 
 .addBtn {
@@ -52,13 +51,12 @@ body {
 }
 
 .clicked {
-  width: 50px;
+  width: 500px;
   z-index: 1;
 }
 
 #rectangles {
   position: relative;
   height: 80vh;
-  /* height: 100vh; */
   outline: 5px dotted blue;
 }
