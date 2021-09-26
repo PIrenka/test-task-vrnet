@@ -29,19 +29,22 @@ function lookClick(event) {
   event.preventDefault();
 
   if (event.target.className === rectanglesClassName) {
-    //     event.target.classList.add("clicked");
+    event.target.classList.add("clicked");
+    console.log(
+      "`${rectanglesClassName} clicked`: ",
+      `${rectanglesClassName} clicked`
+    );
+    // return event.target.classList.add("clicked");
+
     //     console.log("after click the rectangle:  ", rectangle);
     //     document
     //       .querySelector(rectanglesClassName)
     //       .addEventListener("click", removeClassName);
-    return event.target.classList.add("clicked");
     //     // return addClassName();
+  } else if (event.target.className === `${rectanglesClassName} clicked`) {
+    console.log("event.target.className:  ", event.target.className);
+    event.target.classList.remove("clicked");
   }
-
-  //   // document
-  //   //   .querySelector(rectanglesClassName)
-  //   //   .addEventListener("click", removeClassName);
-
   console.log("try more....");
 }
 
