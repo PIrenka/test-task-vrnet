@@ -1,28 +1,36 @@
-const btnRef = document.querySelector('button[data-action="add_rectangle"]');
-const boxesRef = document.getElementById("boxes");
+import refs from "./refs.js";
+import randomColor from "./getRandomColor.js";
 
-btnRef.addEventListener("click", addRectangle);
+console.log(randomColor());
+
+refs.addBtn.addEventListener("click", addRectangle);
+
+const rectanglesClassName = "recDiv";
 
 function addRectangle() {
   let array = [];
 
   const rectangle = document.createElement("div");
-  // rectangle.setAttribute("class", "recDiv");
-  rectangle.classList.add("recDiv");
+  rectangle.classList.add(rectanglesClassName);
+
+  rectangle.style.backgroundColor = `${randomColor()}`;
 
   array.push(rectangle);
-  boxesRef.append(...array);
+  refs.rectanglesContainer.append(...array);
 }
 
-boxesRef.addEventListener("click", lookClick);
-
+// (r = Math.floor(Math.random() * 256)),
+//   (g = Math.floor(Math.random() * 256)),
+//   (b = Math.floor(Math.random() * 256)),
+//   (color = "#" + r.toString(16) + g.toString(16) + b.toString(16));
+//=================================================
+refs.rectanglesContainer.addEventListener("click", lookClick);
 function lookClick(event) {
   event.preventDefault();
 
-  const clickedBox = boxesRef.querySelector(".recDiv");
-
-  if (event.target.className === "recDiv") {
+  if (event.target.className === rectanglesClassName) {
     return event.target.classList.add("clicked");
   }
   console.log("try more....");
 }
+//=================================================
