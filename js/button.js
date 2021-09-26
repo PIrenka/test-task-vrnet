@@ -1,7 +1,9 @@
 import refs from "./refs.js";
-import randomColor from "./getRandomColor.js";
+import getRandomColor from "./randomColor.js";
+import getRandomPosition from "./randomPosition.js";
 
-console.log(randomColor());
+console.log(refs.rectanglesContainer.clientWidth); //ширина вьюпорта
+console.log(getRandomPosition()); // рандомное координаты позиционирования
 
 refs.addBtn.addEventListener("click", addRectangle);
 
@@ -13,16 +15,15 @@ function addRectangle() {
   const rectangle = document.createElement("div");
   rectangle.classList.add(rectanglesClassName);
 
-  rectangle.style.backgroundColor = `${randomColor()}`;
+  rectangle.style.backgroundColor = `${getRandomColor()}`;
+  console.log(rectangle);
+  getRandomPosition(rectangle);
+  // rectangle.elementFromPoint(`${getRandomPosition()}`);
 
   array.push(rectangle);
   refs.rectanglesContainer.append(...array);
 }
 
-// (r = Math.floor(Math.random() * 256)),
-//   (g = Math.floor(Math.random() * 256)),
-//   (b = Math.floor(Math.random() * 256)),
-//   (color = "#" + r.toString(16) + g.toString(16) + b.toString(16));
 //=================================================
 refs.rectanglesContainer.addEventListener("click", lookClick);
 function lookClick(event) {

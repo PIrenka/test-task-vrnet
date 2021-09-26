@@ -40,8 +40,7 @@ body {
   width: 30px;
   height: 20px;
   margin: 10px;
-  cursor: grab;
-  /* background-color: red; */
+  cursor: se-resize;
 
   position: relative;
 }
@@ -50,6 +49,6 @@ body {
   width: 50px;
 }
 
-#boxes {
+#rectangles {
   height: 100vh;
 }
