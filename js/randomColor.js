@@ -7,10 +7,3 @@ function getRandomColor() {
 }
 
 export default getRandomColor;
-// //  =====================
-// function backgroundColorRandom() {
-//   return "rgb(" + r() + "," + r() + "," + r() + ")";
-// }
-// function r() {
-//   return Math.round(255.0 * Math.random());
-// }
