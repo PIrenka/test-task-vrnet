@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  background-color: green;
 }
 
 *,
@@ -10,14 +9,13 @@ html {
 }
 
 body {
-  margin: 20px;
+  /* margin: 20px; */
   padding: 50px;
-  outline: 5px solid firebrick;
   background-color: grey;
 }
 
 .addBtn {
-  outline: 5px solid hotpink;
+  /* outline: 5px solid hotpink; */
   display: block;
   background-color: blueviolet;
   color: white;
@@ -25,7 +23,7 @@ body {
   font-weight: 900;
   padding: 10px 40px;
   border-radius: 6px;
-  border: 3px dotted tomato;
+  border: 5px dotted tomato;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -37,26 +35,21 @@ body {
   background-color: rgb(174, 107, 236);
 }
 
-#rectangles > .recDiv {
-  width: 30px;
-  height: 20px;
-  margin: 10px;
-  cursor: se-resize;
-
+.recDiv {
   position: absolute;
-}
-#reqtangles .recDiv:hover {
-  background-color: red;
-  opacity: 0.5;
+  width: 80px;
+  height: 50px;
+  cursor: se-resize;
 }
 
-.clicked {
-  border: 5px solid red;
+/* .clicked {
+  outline: 1px solid red;
   z-index: 1;
-}
+} */
 
 #rectangles {
   position: relative;
-  height: 80vh;
+  /* height: 80vh; */
+  height: 100vh;
   outline: 5px dotted blue;
 }
